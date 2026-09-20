@@ -13,7 +13,7 @@
 
 | ![main figure](/media/zebra.png)|
 |:--| 
-| **ZEBRA**<p align="justify">ZEBRA approach operates on top of existing prompt learning methods to bridge the base-to-novel generalization gap, preserving zero-shot transferability while benefiting from supervised adaptation through few-shot prompt learning. ZEBRA introduces no additional learnable parameters to existing prompt learning methods and incurs negligible computational overhead.</p> |
+| <p align="justify">**ZEBRA** approach operates on top of existing prompt learning methods to bridge the base-to-novel generalization gap, preserving zero-shot transferability while benefiting from supervised adaptation through few-shot prompt learning. ZEBRA introduces no additional learnable parameters to existing prompt learning methods and incurs negligible computational overhead.</p> |
 
 </br>
 
