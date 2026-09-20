@@ -208,6 +208,8 @@ bash scripts/training/run_all_datasets_all_methods.sh
 
 Checkpoints are named `<DATASET>-SEED<SEED>.pth`, with a `-ZEBRA` suffix for ZEBRA runs, for example `Beijing-Opera-SEED0-ZEBRA.pth`. Training logs and JSON metrics are written to [`logs/training/<METHOD>`](logs/training).
 
+</br>
+
 <a name="run-evaluation"></a>
 
 ## Run Evaluation :zap:
@@ -275,6 +277,10 @@ For multi-fold datasets, the supplied scripts copy the predefined `csv_files/tra
 
 <div class="content has-text-justified"><p>
 
+
+![main figure](/media/zebra_results_banner.jpg)
+
+</br>
 
 ![main figure](/media/zebra_results.jpg)
 
