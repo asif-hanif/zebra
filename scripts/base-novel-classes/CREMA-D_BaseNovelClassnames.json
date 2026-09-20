@@ -1,0 +1,20 @@
+{
+  "base": [
+    "anger",
+    "disgust",
+    "sad"
+  ],
+  "novel": [
+    "fear",
+    "happy",
+    "neutral"
+  ],
+  "all": [
+    "anger",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad"
+  ]
+}

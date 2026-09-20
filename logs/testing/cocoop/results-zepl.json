@@ -1,0 +1,202 @@
+{
+  "0": {
+    "Beijing-Opera": {
+      "base": {
+        "accuracy": 0.96,
+        "f1_score": 0.96,
+        "precision": 0.9615,
+        "recall": 0.9615,
+        "avg_loss": 0.2047,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.7826,
+        "f1_score": 0.7527,
+        "precision": 0.8611,
+        "recall": 0.75,
+        "avg_loss": 0.4643,
+        "epoch": -1
+      }
+    },
+    "CREMA-D": {
+      "base": {
+        "accuracy": 0.5429,
+        "f1_score": 0.5209,
+        "precision": 0.5043,
+        "recall": 0.5737,
+        "avg_loss": 0.9072,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.1994,
+        "f1_score": 0.18,
+        "precision": 0.3513,
+        "recall": 0.3376,
+        "avg_loss": 1.5436,
+        "epoch": -1
+      }
+    },
+    "ESC50-Actions": {
+      "base": {
+        "accuracy": 0.975,
+        "f1_score": 0.9749,
+        "precision": 0.9778,
+        "recall": 0.975,
+        "avg_loss": 0.0396,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.775,
+        "f1_score": 0.6929,
+        "precision": 0.6388,
+        "recall": 0.775,
+        "avg_loss": 0.6918,
+        "epoch": -1
+      }
+    },
+    "ESC50": {
+      "base": {
+        "accuracy": 0.945,
+        "f1_score": 0.9435,
+        "precision": 0.9528,
+        "recall": 0.945,
+        "avg_loss": 0.1473,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.615,
+        "f1_score": 0.5861,
+        "precision": 0.7137,
+        "recall": 0.615,
+        "avg_loss": 1.0649,
+        "epoch": -1
+      }
+    },
+    "GT-Music-Genre": {
+      "base": {
+        "accuracy": 0.8333,
+        "f1_score": 0.8371,
+        "precision": 0.8368,
+        "recall": 0.8483,
+        "avg_loss": 0.4793,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.3776,
+        "f1_score": 0.3032,
+        "precision": 0.3145,
+        "recall": 0.3821,
+        "avg_loss": 3.6397,
+        "epoch": -1
+      }
+    },
+    "NS-Instruments": {
+      "base": {
+        "accuracy": 0.6834,
+        "f1_score": 0.6955,
+        "precision": 0.6968,
+        "recall": 0.7084,
+        "avg_loss": 1.101,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.6373,
+        "f1_score": 0.4447,
+        "precision": 0.4672,
+        "recall": 0.5177,
+        "avg_loss": 1.4159,
+        "epoch": -1
+      }
+    },
+    "RAVDESS": {
+      "base": {
+        "accuracy": 0.6009,
+        "f1_score": 0.5747,
+        "precision": 0.602,
+        "recall": 0.5921,
+        "avg_loss": 0.8811,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.4373,
+        "f1_score": 0.3716,
+        "precision": 0.434,
+        "recall": 0.3996,
+        "avg_loss": 1.5276,
+        "epoch": -1
+      }
+    },
+    "SESA": {
+      "base": {
+        "accuracy": 0.9333,
+        "f1_score": 0.9282,
+        "precision": 0.9233,
+        "recall": 0.9343,
+        "avg_loss": 0.2363,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.95,
+        "f1_score": 0.943,
+        "precision": 0.9643,
+        "recall": 0.9286,
+        "avg_loss": 0.1146,
+        "epoch": -1
+      }
+    },
+    "TUT2017": {
+      "base": {
+        "accuracy": 0.8037,
+        "f1_score": 0.7997,
+        "precision": 0.8107,
+        "recall": 0.8033,
+        "avg_loss": 0.509,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.3735,
+        "f1_score": 0.3291,
+        "precision": 0.3966,
+        "recall": 0.3749,
+        "avg_loss": 2.3424,
+        "epoch": -1
+      }
+    },
+    "UrbanSound8K": {
+      "base": {
+        "accuracy": 0.8789,
+        "f1_score": 0.8892,
+        "precision": 0.8862,
+        "recall": 0.894,
+        "avg_loss": 0.4686,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.6296,
+        "f1_score": 0.6207,
+        "precision": 0.7187,
+        "recall": 0.656,
+        "avg_loss": 1.2423,
+        "epoch": -1
+      }
+    },
+    "VocalSound": {
+      "base": {
+        "accuracy": 0.8363,
+        "f1_score": 0.8347,
+        "precision": 0.8446,
+        "recall": 0.8362,
+        "avg_loss": 0.4057,
+        "epoch": -1
+      },
+      "novel": {
+        "accuracy": 0.7677,
+        "f1_score": 0.7682,
+        "precision": 0.808,
+        "recall": 0.7677,
+        "avg_loss": 0.6089,
+        "epoch": -1
+      }
+    }
+  }
+}

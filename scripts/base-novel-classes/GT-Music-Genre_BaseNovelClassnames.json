@@ -1,0 +1,28 @@
+{
+  "base": [
+    "classical",
+    "country",
+    "hiphop",
+    "jazz",
+    "rock"
+  ],
+  "novel": [
+    "blues",
+    "disco",
+    "metal",
+    "pop",
+    "reggae"
+  ],
+  "all": [
+    "blues",
+    "classical",
+    "country",
+    "disco",
+    "hiphop",
+    "jazz",
+    "metal",
+    "pop",
+    "reggae",
+    "rock"
+  ]
+}

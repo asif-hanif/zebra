@@ -1,0 +1,38 @@
+{
+  "base": [
+    "car",
+    "city_center",
+    "grocery_store",
+    "library",
+    "metro_station",
+    "park",
+    "residential_area"
+  ],
+  "novel": [
+    "beach",
+    "bus",
+    "cafe/restaurant",
+    "forest_path",
+    "home",
+    "office",
+    "train",
+    "tram"
+  ],
+  "all": [
+    "beach",
+    "bus",
+    "cafe/restaurant",
+    "car",
+    "city_center",
+    "forest_path",
+    "grocery_store",
+    "home",
+    "library",
+    "metro_station",
+    "office",
+    "park",
+    "residential_area",
+    "train",
+    "tram"
+  ]
+}

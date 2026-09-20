@@ -1,0 +1,329 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 11:34 AM , 12_Feb_2026  GST
+
+
+
+Model:    COOP
+Dataset:  ICBHI
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/ICBHI
+Split                     : train
+Number of Classes         : 3
+Number of Shots           : 16
+Total Number of Samples   : 44
+Classnames                : ['Bronchiectasis', 'Chronic Obstructive Pulmonary Disease', 'Healthy']
+Label to Classname        : {0: 'Bronchiectasis', 1: 'Chronic Obstructive Pulmonary Disease', 2: 'Healthy'}
+Classname to Label        : {'Bronchiectasis': 0, 'Chronic Obstructive Pulmonary Disease': 1, 'Healthy': 2}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/ICBHI
+Split                     : test
+Number of Classes         : 3
+Number of Shots           : -1
+Total Number of Samples   : 170
+Classnames                : ['Bronchiectasis', 'Chronic Obstructive Pulmonary Disease', 'Healthy']
+Label to Classname        : {0: 'Bronchiectasis', 1: 'Chronic Obstructive Pulmonary Disease', 2: 'Healthy'}
+Classname to Label        : {'Bronchiectasis': 0, 'Chronic Obstructive Pulmonary Disease': 1, 'Healthy': 2}
+########################################################
+
+
+Using Method: 'COOP'
+
+
+
+COOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COOP ...
+
+Arguments:
+
+method_name              : coop
+save_model               : True
+save_model_path          : /home/admin/asif.hanif/models/zebra
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : None
+source_model_dataset     : None
+eval_dataset             : ICBHI
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/ICBHI
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : True
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : False
+eval_type                : base
+exp_name                 : ICBHI
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['Bronchiectasis', 'Chronic Obstructive Pulmonary Disease', 'Healthy'], 'novel': ['Upper Respiratory Tract Infection', 'Pneumonia', 'Bronchiolitis'], 'all': ['Upper Respiratory Tract Infection', 'Healthy', 'Chronic Obstructive Pulmonary Disease', 'Bronchiectasis', 'Pneumonia', 'Bronchiolitis']}
+log_dir                  : logs/training/coop
+json_file_path           : logs/training/coop/ICBHI-SEED0-BASE.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x767933fe30a0>>
+classnames               : ['Bronchiectasis', 'Chronic Obstructive Pulmonary Disease', 'Healthy']
+
+
+
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:01<00:53,  1.10s/it]
+  4%|4         | 2/50 [00:01<00:46,  1.03it/s]
+  6%|6         | 3/50 [00:02<00:44,  1.05it/s]
+  8%|8         | 4/50 [00:03<00:44,  1.04it/s]
+
+-------------------------------
+Train Evaluation (Epoch 5/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.6818
+F1-Score        = 0.6861
+Precision       = 0.6980
+Recall          = 0.7014
+Average Loss    = 0.8465
+
+
+
+ 10%|#         | 5/50 [00:04<00:43,  1.03it/s]
+ 12%|#2        | 6/50 [00:05<00:41,  1.05it/s]
+ 14%|#4        | 7/50 [00:06<00:40,  1.07it/s]
+ 16%|#6        | 8/50 [00:07<00:38,  1.08it/s]
+ 18%|#8        | 9/50 [00:08<00:37,  1.08it/s]
+
+-------------------------------
+Train Evaluation (Epoch 10/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.7500
+F1-Score        = 0.7428
+Precision       = 0.7460
+Recall          = 0.7431
+Average Loss    = 0.6975
+
+
+
+ 20%|##        | 10/50 [00:09<00:37,  1.07it/s]
+ 22%|##2       | 11/50 [00:10<00:37,  1.04it/s]
+ 24%|##4       | 12/50 [00:11<00:35,  1.06it/s]
+ 26%|##6       | 13/50 [00:12<00:34,  1.07it/s]
+ 28%|##8       | 14/50 [00:13<00:33,  1.08it/s]
+
+-------------------------------
+Train Evaluation (Epoch 15/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.9091
+F1-Score        = 0.9076
+Precision       = 0.9071
+Recall          = 0.9097
+Average Loss    = 0.4661
+
+
+
+ 30%|###       | 15/50 [00:14<00:33,  1.06it/s]
+ 32%|###2      | 16/50 [00:15<00:32,  1.04it/s]
+ 34%|###4      | 17/50 [00:16<00:31,  1.05it/s]
+ 36%|###6      | 18/50 [00:17<00:30,  1.03it/s]
+ 38%|###8      | 19/50 [00:18<00:29,  1.05it/s]
+
+-------------------------------
+Train Evaluation (Epoch 20/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.7955
+F1-Score        = 0.7943
+Precision       = 0.8001
+Recall          = 0.8056
+Average Loss    = 0.4999
+
+
+
+ 40%|####      | 20/50 [00:18<00:28,  1.06it/s]
+ 42%|####2     | 21/50 [00:19<00:27,  1.04it/s]
+ 44%|####4     | 22/50 [00:20<00:27,  1.03it/s]
+ 46%|####6     | 23/50 [00:21<00:25,  1.05it/s]
+ 48%|####8     | 24/50 [00:22<00:24,  1.07it/s]
+
+-------------------------------
+Train Evaluation (Epoch 25/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.8409
+F1-Score        = 0.8393
+Precision       = 0.8413
+Recall          = 0.8472
+Average Loss    = 0.4266
+
+
+
+ 50%|#####     | 25/50 [00:23<00:23,  1.05it/s]
+ 52%|#####2    | 26/50 [00:24<00:22,  1.05it/s]
+ 54%|#####4    | 27/50 [00:25<00:21,  1.06it/s]
+ 56%|#####6    | 28/50 [00:26<00:21,  1.03it/s]
+ 58%|#####8    | 29/50 [00:27<00:20,  1.05it/s]
+
+-------------------------------
+Train Evaluation (Epoch 30/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.8864
+F1-Score        = 0.8829
+Precision       = 0.9052
+Recall          = 0.8750
+Average Loss    = 0.2839
+
+
+
+ 60%|######    | 30/50 [00:28<00:18,  1.05it/s]
+ 62%|######2   | 31/50 [00:29<00:17,  1.07it/s]
+ 64%|######4   | 32/50 [00:30<00:16,  1.07it/s]
+ 66%|######6   | 33/50 [00:31<00:15,  1.08it/s]
+ 68%|######8   | 34/50 [00:32<00:14,  1.09it/s]
+
+-------------------------------
+Train Evaluation (Epoch 35/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.8864
+F1-Score        = 0.8889
+Precision       = 0.8889
+Recall          = 0.8889
+Average Loss    = 0.3153
+
+
+
+ 70%|#######   | 35/50 [00:33<00:14,  1.05it/s]
+ 72%|#######2  | 36/50 [00:34<00:12,  1.08it/s]
+ 74%|#######4  | 37/50 [00:34<00:11,  1.10it/s]
+ 76%|#######6  | 38/50 [00:35<00:11,  1.07it/s]
+ 78%|#######8  | 39/50 [00:36<00:10,  1.07it/s]
+
+-------------------------------
+Train Evaluation (Epoch 40/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.8636
+F1-Score        = 0.8577
+Precision       = 0.8692
+Recall          = 0.8542
+Average Loss    = 0.2844
+
+
+
+ 80%|########  | 40/50 [00:37<00:09,  1.07it/s]
+ 82%|########2 | 41/50 [00:38<00:08,  1.09it/s]
+ 84%|########4 | 42/50 [00:39<00:07,  1.07it/s]
+ 86%|########6 | 43/50 [00:40<00:06,  1.06it/s]
+ 88%|########8 | 44/50 [00:41<00:05,  1.07it/s]
+
+-------------------------------
+Train Evaluation (Epoch 45/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.8636
+F1-Score        = 0.8627
+Precision       = 0.8619
+Recall          = 0.8681
+Average Loss    = 0.2401
+
+
+
+ 90%|######### | 45/50 [00:42<00:04,  1.08it/s]
+ 92%|#########2| 46/50 [00:43<00:03,  1.06it/s]
+ 94%|#########3| 47/50 [00:44<00:02,  1.04it/s]
+ 96%|#########6| 48/50 [00:45<00:01,  1.04it/zebra
+ 98%|#########8| 49/50 [00:46<00:00,  1.03it/s]
+
+-------------------------------
+Train Evaluation (Epoch 50/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.8409
+F1-Score        = 0.8353
+Precision       = 0.8399
+Recall          = 0.8403
+Average Loss    = 0.3820
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/3
+Batch 2/3
+Batch 3/3
+
+
+Time & Date = 11:35 AM , 12_Feb_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation -- BASE
+-------------------------------
+
+Accuracy        = 0.8176
+F1-Score        = 0.5380
+Precision       = 0.4842
+Recall          = 0.8440
+Average Loss    = 0.5280
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [00:49<00:00,  1.50s/it]
+100%|##########| 50/50 [00:49<00:00,  1.02it/s]
+Saving Context Weights for Method: 'COOP'
+
+Model saved to /home/admin/asif.hanif/models/palm-base-novel/coop/ICBHI-SEED0.pth
+
+
+Time & Date = 11:35 AM , 12_Feb_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 49 Seconds
+
+

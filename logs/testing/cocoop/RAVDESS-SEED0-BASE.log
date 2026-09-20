@@ -1,0 +1,430 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 05:03 PM , 11_Jan_2026  GST
+
+
+
+Model:    COCOOP
+Dataset:  RAVDESS
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/RAVDESS
+Split                     : train
+Number of Classes         : 4
+Number of Shots           : 16
+Total Number of Samples   : 64
+Classnames                : ['calm', 'disgust', 'happy', 'surprised']
+Label to Classname        : {0: 'calm', 1: 'disgust', 2: 'happy', 3: 'surprised'}
+Classname to Label        : {'calm': 0, 'disgust': 1, 'happy': 2, 'surprised': 3}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/RAVDESS
+Split                     : test
+Number of Classes         : 4
+Number of Shots           : -1
+Total Number of Samples   : 228
+Classnames                : ['calm', 'disgust', 'happy', 'surprised']
+Label to Classname        : {0: 'calm', 1: 'disgust', 2: 'happy', 3: 'surprised'}
+Classname to Label        : {'calm': 0, 'disgust': 1, 'happy': 2, 'surprised': 3}
+########################################################
+
+
+Using Method: 'COCOOP'
+
+
+
+COCOOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COCOOP ...
+
+Arguments:
+
+method_name              : cocoop
+save_model               : True
+save_model_path          : /home/admin/asif.hanif/models/zebra
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : None
+source_model_dataset     : None
+eval_dataset             : RAVDESS
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/RAVDESS
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : False
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : False
+eval_type                : None
+eval_base                : True
+eval_novel               : False
+exp_name                 : RAVDESS
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['calm', 'disgust', 'happy', 'surprised'], 'novel': ['angry', 'fearful', 'neutral', 'sad'], 'all': ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']}
+log_dir                  : logs/training/cocoop
+json_file_path           : logs/training/cocoop/RAVDESS-SEED0-BASE.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7e2d9b78ae80>>
+classnames               : ['calm', 'disgust', 'happy', 'surprised']
+
+
+
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:03<03:03,  3.74s/it]
+  4%|4         | 2/50 [00:07<02:53,  3.61s/it]
+  6%|6         | 3/50 [00:10<02:46,  3.55s/it]
+  8%|8         | 4/50 [00:14<02:43,  3.55s/it]
+
+-------------------------------
+Train Evaluation (Epoch 5/50)
+-------------------------------
+
+Accuracy        = 0.4219
+F1-Score        = 0.4288
+Precision       = 0.4499
+Recall          = 0.4219
+Average Loss    = 1.1827
+
+
+
+ 10%|#         | 5/50 [00:17<02:38,  3.53s/it]
+ 12%|#2        | 6/50 [00:21<02:34,  3.52s/it]
+ 14%|#4        | 7/50 [00:24<02:30,  3.49s/it]
+ 16%|#6        | 8/50 [00:28<02:26,  3.49s/it]
+ 18%|#8        | 9/50 [00:31<02:23,  3.51s/it]
+
+-------------------------------
+Train Evaluation (Epoch 10/50)
+-------------------------------
+
+Accuracy        = 0.5312
+F1-Score        = 0.5292
+Precision       = 0.5459
+Recall          = 0.5312
+Average Loss    = 1.0412
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 05:04 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 7 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6140
+F1-Score        = 0.5624
+Precision       = 0.5791
+Recall          = 0.5774
+Average Loss    = 0.9233
+
+
+
+ 20%|##        | 10/50 [00:42<03:53,  5.84s/it]
+ 22%|##2       | 11/50 [00:46<03:19,  5.11s/it]
+ 24%|##4       | 12/50 [00:49<02:55,  4.62s/it]
+ 26%|##6       | 13/50 [00:53<02:38,  4.28s/it]
+ 28%|##8       | 14/50 [00:56<02:24,  4.02s/it]
+
+-------------------------------
+Train Evaluation (Epoch 15/50)
+-------------------------------
+
+Accuracy        = 0.5781
+F1-Score        = 0.5477
+Precision       = 0.6902
+Recall          = 0.5781
+Average Loss    = 0.8819
+
+
+
+ 30%|###       | 15/50 [01:00<02:15,  3.87s/it]
+ 32%|###2      | 16/50 [01:03<02:07,  3.75s/it]
+ 34%|###4      | 17/50 [01:07<02:01,  3.69s/it]
+ 36%|###6      | 18/50 [01:10<01:56,  3.64s/it]
+ 38%|###8      | 19/50 [01:14<01:53,  3.66s/it]
+
+-------------------------------
+Train Evaluation (Epoch 20/50)
+-------------------------------
+
+Accuracy        = 0.7344
+F1-Score        = 0.7358
+Precision       = 0.7417
+Recall          = 0.7344
+Average Loss    = 0.7148
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 05:04 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 7 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6404
+F1-Score        = 0.6308
+Precision       = 0.6788
+Recall          = 0.6621
+Average Loss    = 0.9091
+
+
+
+ 40%|####      | 20/50 [01:25<02:58,  5.97s/it]
+ 42%|####2     | 21/50 [01:29<02:32,  5.25s/it]
+ 44%|####4     | 22/50 [01:33<02:13,  4.77s/it]
+ 46%|####6     | 23/50 [01:36<01:59,  4.42s/it]
+ 48%|####8     | 24/50 [01:40<01:48,  4.18s/it]
+
+-------------------------------
+Train Evaluation (Epoch 25/50)
+-------------------------------
+
+Accuracy        = 0.7031
+F1-Score        = 0.7034
+Precision       = 0.7391
+Recall          = 0.7031
+Average Loss    = 0.6610
+
+
+
+ 50%|#####     | 25/50 [01:43<01:39,  3.96s/it]
+ 52%|#####2    | 26/50 [01:47<01:31,  3.83s/it]
+ 54%|#####4    | 27/50 [01:50<01:26,  3.76s/it]
+ 56%|#####6    | 28/50 [01:54<01:20,  3.68s/it]
+ 58%|#####8    | 29/50 [01:57<01:15,  3.61s/it]
+
+-------------------------------
+Train Evaluation (Epoch 30/50)
+-------------------------------
+
+Accuracy        = 0.7656
+F1-Score        = 0.7616
+Precision       = 0.7704
+Recall          = 0.7656
+Average Loss    = 0.6338
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 05:05 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 7 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6053
+F1-Score        = 0.5935
+Precision       = 0.6519
+Recall          = 0.6354
+Average Loss    = 0.9470
+
+
+
+ 60%|######    | 30/50 [02:08<01:55,  5.78s/it]
+ 62%|######2   | 31/50 [02:12<01:37,  5.11s/it]
+ 64%|######4   | 32/50 [02:15<01:23,  4.65s/it]
+ 66%|######6   | 33/50 [02:19<01:13,  4.31s/it]
+ 68%|######8   | 34/50 [02:22<01:04,  4.06s/it]
+
+-------------------------------
+Train Evaluation (Epoch 35/50)
+-------------------------------
+
+Accuracy        = 0.6875
+F1-Score        = 0.6504
+Precision       = 0.7801
+Recall          = 0.6875
+Average Loss    = 0.6578
+
+
+
+ 70%|#######   | 35/50 [02:26<00:58,  3.90s/it]
+ 72%|#######2  | 36/50 [02:29<00:52,  3.77s/it]
+ 74%|#######4  | 37/50 [02:33<00:47,  3.68s/it]
+ 76%|#######6  | 38/50 [02:36<00:43,  3.66s/it]
+ 78%|#######8  | 39/50 [02:40<00:40,  3.65s/it]
+
+-------------------------------
+Train Evaluation (Epoch 40/50)
+-------------------------------
+
+Accuracy        = 0.7969
+F1-Score        = 0.7956
+Precision       = 0.8064
+Recall          = 0.7969
+Average Loss    = 0.6114
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 05:06 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 7 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6404
+F1-Score        = 0.6313
+Precision       = 0.6464
+Recall          = 0.6528
+Average Loss    = 0.8693
+
+
+
+ 80%|########  | 40/50 [02:51<00:59,  5.98s/it]
+ 82%|########2 | 41/50 [02:55<00:47,  5.28s/it]
+ 84%|########4 | 42/50 [02:58<00:37,  4.74s/it]
+ 86%|########6 | 43/50 [03:02<00:30,  4.34s/it]
+ 88%|########8 | 44/50 [03:05<00:24,  4.06s/it]
+
+-------------------------------
+Train Evaluation (Epoch 45/50)
+-------------------------------
+
+Accuracy        = 0.7812
+F1-Score        = 0.7767
+Precision       = 0.7912
+Recall          = 0.7812
+Average Loss    = 0.6110
+
+
+
+ 90%|######### | 45/50 [03:09<00:19,  3.88s/it]
+ 92%|#########2| 46/50 [03:12<00:14,  3.75s/it]
+ 94%|#########3| 47/50 [03:16<00:10,  3.65s/izebra
+ 96%|#########6| 48/50 [03:19<00:07,  3.58s/it]
+ 98%|#########8| 49/50 [03:22<00:03,  3.53s/it]
+
+-------------------------------
+Train Evaluation (Epoch 50/50)
+-------------------------------
+
+Accuracy        = 0.7500
+F1-Score        = 0.7426
+Precision       = 0.7708
+Recall          = 0.7500
+Average Loss    = 0.6981
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 05:07 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 7 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6053
+F1-Score        = 0.5763
+Precision       = 0.5767
+Recall          = 0.5892
+Average Loss    = 0.8538
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [03:34<00:00,  5.88s/it]
+100%|##########| 50/50 [03:34<00:00,  4.29s/it]
+Saving Context Weights for Method: 'COCOOP'
+
+Model saved to /home/admin/asif.hanif/models/palm-base-novel/cocoop/RAVDESS-SEED0.pth
+
+
+Time & Date = 05:07 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 3 Minutes : 34 Seconds
+
+

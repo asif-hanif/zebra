@@ -1,0 +1,438 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 04:42 PM , 11_Jan_2026  GST
+
+
+
+Model:    COOP
+Dataset:  TUT2017
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/TUT2017
+Split                     : train
+Number of Classes         : 7
+Number of Shots           : 16
+Total Number of Samples   : 112
+Classnames                : ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area']
+Label to Classname        : {0: 'car', 1: 'city_center', 2: 'grocery_store', 3: 'library', 4: 'metro_station', 5: 'park', 6: 'residential_area'}
+Classname to Label        : {'car': 0, 'city_center': 1, 'grocery_store': 2, 'library': 3, 'metro_station': 4, 'park': 5, 'residential_area': 6}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/TUT2017
+Split                     : test
+Number of Classes         : 7
+Number of Shots           : -1
+Total Number of Samples   : 438
+Classnames                : ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area']
+Label to Classname        : {0: 'car', 1: 'city_center', 2: 'grocery_store', 3: 'library', 4: 'metro_station', 5: 'park', 6: 'residential_area'}
+Classname to Label        : {'car': 0, 'city_center': 1, 'grocery_store': 2, 'library': 3, 'metro_station': 4, 'park': 5, 'residential_area': 6}
+########################################################
+
+
+Using Method: 'COOP'
+
+
+
+COOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COOP ...
+
+Arguments:
+
+method_name              : coop
+save_model               : True
+save_model_path          : /home/admin/asif.hanif/models/zebra
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : None
+source_model_dataset     : None
+eval_dataset             : TUT2017
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/TUT2017
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : False
+eval_base                : True
+eval_novel               : False
+exp_name                 : TUT2017
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area'], 'novel': ['beach', 'bus', 'cafe/restaurant', 'forest_path', 'home', 'office', 'train', 'tram'], 'all': ['beach', 'bus', 'cafe/restaurant', 'car', 'city_center', 'forest_path', 'grocery_store', 'home', 'library', 'metro_station', 'office', 'park', 'residential_area', 'train', 'tram']}
+log_dir                  : logs/training/coop
+json_file_path           : logs/training/coop/TUT2017-SEED0-BASE.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x713028cdc4f0>>
+classnames               : ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area']
+
+
+
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:02<01:55,  2.36s/it]
+  4%|4         | 2/50 [00:04<01:51,  2.32s/it]
+  6%|6         | 3/50 [00:06<01:47,  2.28s/it]
+  8%|8         | 4/50 [00:08<01:38,  2.15s/it]
+
+-------------------------------
+Train Evaluation (Epoch 5/50)
+-------------------------------
+
+Accuracy        = 0.4018
+F1-Score        = 0.3869
+Precision       = 0.4328
+Recall          = 0.4018
+Average Loss    = 1.5331
+
+
+
+ 10%|#         | 5/50 [00:11<01:37,  2.18s/it]
+ 12%|#2        | 6/50 [00:13<01:36,  2.20s/it]
+ 14%|#4        | 7/50 [00:15<01:34,  2.21s/it]
+ 16%|#6        | 8/50 [00:17<01:32,  2.21s/it]
+ 18%|#8        | 9/50 [00:19<01:31,  2.22s/it]
+
+-------------------------------
+Train Evaluation (Epoch 10/50)
+-------------------------------
+
+Accuracy        = 0.5536
+F1-Score        = 0.5516
+Precision       = 0.5702
+Recall          = 0.5536
+Average Loss    = 1.1031
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/4
+Batch 2/4
+Batch 3/4
+Batch 4/4
+
+
+Time & Date = 04:42 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6621
+F1-Score        = 0.6458
+Precision       = 0.6655
+Recall          = 0.6612
+Average Loss    = 0.8455
+
+
+
+ 20%|##        | 10/50 [00:26<02:23,  3.59s/it]
+ 22%|##2       | 11/50 [00:28<02:04,  3.18s/it]
+ 24%|##4       | 12/50 [00:31<01:50,  2.90s/it]
+ 26%|##6       | 13/50 [00:33<01:39,  2.70s/it]
+ 28%|##8       | 14/50 [00:35<01:32,  2.56s/it]
+
+-------------------------------
+Train Evaluation (Epoch 15/50)
+-------------------------------
+
+Accuracy        = 0.6250
+F1-Score        = 0.6141
+Precision       = 0.6238
+Recall          = 0.6250
+Average Loss    = 1.0005
+
+
+
+ 30%|###       | 15/50 [00:37<01:25,  2.46s/it]
+ 32%|###2      | 16/50 [00:40<01:20,  2.38s/it]
+ 34%|###4      | 17/50 [00:42<01:17,  2.35s/it]
+ 36%|###6      | 18/50 [00:44<01:11,  2.24s/it]
+ 38%|###8      | 19/50 [00:46<01:09,  2.23s/it]
+
+-------------------------------
+Train Evaluation (Epoch 20/50)
+-------------------------------
+
+Accuracy        = 0.6964
+F1-Score        = 0.6927
+Precision       = 0.7008
+Recall          = 0.6964
+Average Loss    = 0.7736
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/4
+Batch 2/4
+Batch 3/4
+Batch 4/4
+
+
+Time & Date = 04:43 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6735
+F1-Score        = 0.6654
+Precision       = 0.6986
+Recall          = 0.6722
+Average Loss    = 0.7617
+
+
+
+ 40%|####      | 20/50 [00:53<01:50,  3.68s/it]
+ 42%|####2     | 21/50 [00:55<01:34,  3.25s/it]
+ 44%|####4     | 22/50 [00:58<01:22,  2.94s/it]
+ 46%|####6     | 23/50 [01:00<01:13,  2.72s/it]
+ 48%|####8     | 24/50 [01:02<01:04,  2.48s/it]
+
+-------------------------------
+Train Evaluation (Epoch 25/50)
+-------------------------------
+
+Accuracy        = 0.7143
+F1-Score        = 0.7109
+Precision       = 0.7220
+Recall          = 0.7143
+Average Loss    = 0.7882
+
+
+
+ 50%|#####     | 25/50 [01:04<00:59,  2.39s/it]
+ 52%|#####2    | 26/50 [01:06<00:56,  2.33s/it]
+ 54%|#####4    | 27/50 [01:08<00:52,  2.29s/it]
+ 56%|#####6    | 28/50 [01:10<00:49,  2.26s/it]
+ 58%|#####8    | 29/50 [01:13<00:47,  2.26s/it]
+
+-------------------------------
+Train Evaluation (Epoch 30/50)
+-------------------------------
+
+Accuracy        = 0.7411
+F1-Score        = 0.7379
+Precision       = 0.7392
+Recall          = 0.7411
+Average Loss    = 0.6742
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/4
+Batch 2/4
+Batch 3/4
+Batch 4/4
+
+
+Time & Date = 04:43 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6895
+F1-Score        = 0.6610
+Precision       = 0.6718
+Recall          = 0.6891
+Average Loss    = 0.7796
+
+
+
+ 60%|######    | 30/50 [01:19<01:11,  3.58s/it]
+ 62%|######2   | 31/50 [01:22<01:00,  3.17s/it]
+ 64%|######4   | 32/50 [01:24<00:51,  2.88s/it]
+ 66%|######6   | 33/50 [01:26<00:45,  2.69s/it]
+ 68%|######8   | 34/50 [01:28<00:40,  2.55s/it]
+
+-------------------------------
+Train Evaluation (Epoch 35/50)
+-------------------------------
+
+Accuracy        = 0.7321
+F1-Score        = 0.7260
+Precision       = 0.7362
+Recall          = 0.7321
+Average Loss    = 0.6906
+
+
+
+ 70%|#######   | 35/50 [01:30<00:36,  2.46s/it]
+ 72%|#######2  | 36/50 [01:33<00:33,  2.38s/it]
+ 74%|#######4  | 37/50 [01:35<00:30,  2.33s/it]
+ 76%|#######6  | 38/50 [01:37<00:27,  2.29s/it]
+ 78%|#######8  | 39/50 [01:39<00:24,  2.26s/it]
+
+-------------------------------
+Train Evaluation (Epoch 40/50)
+-------------------------------
+
+Accuracy        = 0.6964
+F1-Score        = 0.6886
+Precision       = 0.6985
+Recall          = 0.6964
+Average Loss    = 0.7665
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/4
+Batch 2/4
+Batch 3/4
+Batch 4/4
+
+
+Time & Date = 04:44 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.7260
+F1-Score        = 0.7027
+Precision       = 0.7382
+Recall          = 0.7258
+Average Loss    = 0.7175
+
+
+
+ 80%|########  | 40/50 [01:46<00:36,  3.63s/it]
+ 82%|########2 | 41/50 [01:48<00:28,  3.20s/it]
+ 84%|########4 | 42/50 [01:51<00:23,  2.95s/it]
+ 86%|########6 | 43/50 [01:53<00:19,  2.74s/it]
+ 88%|########8 | 44/50 [01:55<00:15,  2.57s/it]
+
+-------------------------------
+Train Evaluation (Epoch 45/50)
+-------------------------------
+
+Accuracy        = 0.7679
+F1-Score        = 0.7627
+Precision       = 0.7666
+Recall          = 0.7679
+Average Loss    = 0.6259
+
+
+
+ 90%|######### | 45/50 [01:57<00:12,  2.44s/it]
+ 92%|#########2| 46/50 [01:59<00:09,  2.36s/it]
+ 94%|#########3| 47/50 [02:02<00:07,  2.33s/it]
+ 96%|#########6| 48/50 [02:04<00:04,  2.31s/it]
+ 98%|#########8| 49/50 [02:06<00:02,  2.26s/izebra
+
+-------------------------------
+Train Evaluation (Epoch 50/50)
+-------------------------------
+
+Accuracy        = 0.7679
+F1-Score        = 0.7625
+Precision       = 0.7660
+Recall          = 0.7679
+Average Loss    = 0.6118
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/4
+Batch 2/4
+Batch 3/4
+Batch 4/4
+
+
+Time & Date = 04:44 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.6781
+F1-Score        = 0.6662
+Precision       = 0.6887
+Recall          = 0.6767
+Average Loss    = 0.7504
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [02:13<00:00,  3.72s/it]
+100%|##########| 50/50 [02:13<00:00,  2.67s/it]
+Saving Context Weights for Method: 'COOP'
+
+Model saved to /home/admin/asif.hanif/models/palm-base-novel/coop/TUT2017-SEED0.pth
+
+
+Time & Date = 04:44 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 2 Minutes : 13 Seconds
+
+

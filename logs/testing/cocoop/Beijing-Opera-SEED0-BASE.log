@@ -1,0 +1,423 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 04:24 PM , 11_Jan_2026  GST
+
+
+
+Model:    COCOOP
+Dataset:  Beijing-Opera
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/Beijing-Opera
+Split                     : train
+Number of Classes         : 2
+Number of Shots           : 16
+Total Number of Samples   : 32
+Classnames                : ['bangu', 'xiaoluo']
+Label to Classname        : {0: 'bangu', 1: 'xiaoluo'}
+Classname to Label        : {'bangu': 0, 'xiaoluo': 1}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/Beijing-Opera
+Split                     : test
+Number of Classes         : 2
+Number of Shots           : -1
+Total Number of Samples   : 25
+Classnames                : ['bangu', 'xiaoluo']
+Label to Classname        : {0: 'bangu', 1: 'xiaoluo'}
+Classname to Label        : {'bangu': 0, 'xiaoluo': 1}
+########################################################
+
+
+Using Method: 'COCOOP'
+
+
+
+COCOOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COCOOP ...
+
+Arguments:
+
+method_name              : cocoop
+save_model               : True
+save_model_path          : /home/admin/asif.hanif/models/zebra
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : None
+source_model_dataset     : None
+eval_dataset             : Beijing-Opera
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/Beijing-Opera
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : False
+eval_base                : True
+eval_novel               : False
+exp_name                 : Beijing-Opera
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['bangu', 'xiaoluo'], 'novel': ['daluo', 'naobo'], 'all': ['bangu', 'daluo', 'naobo', 'xiaoluo']}
+log_dir                  : logs/training/cocoop
+json_file_path           : logs/training/cocoop/Beijing-Opera-SEED0-BASE.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7af6c3da23d0>>
+classnames               : ['bangu', 'xiaoluo']
+
+
+
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:01<01:36,  1.97s/it]
+  4%|4         | 2/50 [00:03<01:31,  1.91s/it]
+  6%|6         | 3/50 [00:05<01:29,  1.91s/it]
+  8%|8         | 4/50 [00:07<01:27,  1.89s/it]
+
+-------------------------------
+Train Evaluation (Epoch 5/50)
+-------------------------------
+
+Accuracy        = 0.9688
+F1-Score        = 0.9687
+Precision       = 0.9706
+Recall          = 0.9688
+Average Loss    = 0.1819
+
+
+
+ 10%|#         | 5/50 [00:09<01:25,  1.91s/it]
+ 12%|#2        | 6/50 [00:11<01:26,  1.96s/it]
+ 14%|#4        | 7/50 [00:13<01:25,  1.98s/it]
+ 16%|#6        | 8/50 [00:15<01:24,  2.01s/it]
+ 18%|#8        | 9/50 [00:17<01:22,  2.01s/it]
+
+-------------------------------
+Train Evaluation (Epoch 10/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0205
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/1
+
+
+Time & Date = 04:24 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.8400
+F1-Score        = 0.8333
+Precision       = 0.8824
+Recall          = 0.8333
+Average Loss    = 0.3579
+
+
+
+ 20%|##        | 10/50 [00:20<01:35,  2.39s/it]
+ 22%|##2       | 11/50 [00:23<01:29,  2.29s/it]
+ 24%|##4       | 12/50 [00:25<01:24,  2.21s/it]
+ 26%|##6       | 13/50 [00:27<01:19,  2.15s/it]
+ 28%|##8       | 14/50 [00:29<01:16,  2.12s/it]
+
+-------------------------------
+Train Evaluation (Epoch 15/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0042
+
+
+
+ 30%|###       | 15/50 [00:31<01:12,  2.08s/it]
+ 32%|###2      | 16/50 [00:33<01:10,  2.07s/it]
+ 34%|###4      | 17/50 [00:35<01:08,  2.07s/it]
+ 36%|###6      | 18/50 [00:37<01:06,  2.08s/it]
+ 38%|###8      | 19/50 [00:39<01:04,  2.07s/it]
+
+-------------------------------
+Train Evaluation (Epoch 20/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0030
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/1
+
+
+Time & Date = 04:25 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.9600
+F1-Score        = 0.9600
+Precision       = 0.9615
+Recall          = 0.9615
+Average Loss    = 0.0847
+
+
+
+ 40%|####      | 20/50 [00:42<01:12,  2.43s/it]
+ 42%|####2     | 21/50 [00:44<01:07,  2.32s/it]
+ 44%|####4     | 22/50 [00:46<01:03,  2.25s/it]
+ 46%|####6     | 23/50 [00:48<00:59,  2.19s/it]
+ 48%|####8     | 24/50 [00:50<00:55,  2.15s/it]
+
+-------------------------------
+Train Evaluation (Epoch 25/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0036
+
+
+
+ 50%|#####     | 25/50 [00:52<00:52,  2.09s/it]
+ 52%|#####2    | 26/50 [00:54<00:50,  2.10s/it]
+ 54%|#####4    | 27/50 [00:56<00:47,  2.07s/it]
+ 56%|#####6    | 28/50 [00:58<00:44,  2.04s/it]
+ 58%|#####8    | 29/50 [01:01<00:43,  2.06s/it]
+
+-------------------------------
+Train Evaluation (Epoch 30/50)
+-------------------------------
+
+Accuracy        = 0.9375
+F1-Score        = 0.9373
+Precision       = 0.9444
+Recall          = 0.9375
+Average Loss    = 0.0786
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/1
+
+
+Time & Date = 04:25 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0245
+
+
+
+ 60%|######    | 30/50 [01:04<00:48,  2.42s/it]
+ 62%|######2   | 31/50 [01:06<00:43,  2.30s/it]
+ 64%|######4   | 32/50 [01:08<00:40,  2.24s/it]
+ 66%|######6   | 33/50 [01:10<00:36,  2.17s/it]
+ 68%|######8   | 34/50 [01:12<00:34,  2.15s/it]
+
+-------------------------------
+Train Evaluation (Epoch 35/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0135
+
+
+
+ 70%|#######   | 35/50 [01:14<00:31,  2.11s/it]
+ 72%|#######2  | 36/50 [01:16<00:29,  2.11s/it]
+ 74%|#######4  | 37/50 [01:18<00:27,  2.11s/it]
+ 76%|#######6  | 38/50 [01:20<00:25,  2.09s/it]
+ 78%|#######8  | 39/50 [01:22<00:22,  2.09s/it]
+
+-------------------------------
+Train Evaluation (Epoch 40/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0027
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/1
+
+
+Time & Date = 04:25 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0166
+
+
+
+ 80%|########  | 40/50 [01:26<00:24,  2.41s/it]
+ 82%|########2 | 41/50 [01:28<00:20,  2.32s/it]
+ 84%|########4 | 42/50 [01:30<00:17,  2.24s/it]
+ 86%|########6 | 43/50 [01:32<00:15,  2.18s/it]
+ 88%|########8 | 44/50 [01:34<00:12,  2.14s/it]
+
+-------------------------------
+Train Evaluation (Epoch 45/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0010
+
+
+
+ 90%|######### | 45/50 [01:36<00:10,  2.11s/it]
+ 92%|#########2| 46/50 [01:38<00:08,  2.07s/izebra
+ 94%|#########3| 47/50 [01:40<00:06,  2.06s/it]
+ 96%|#########6| 48/50 [01:42<00:04,  2.04s/it]
+ 98%|#########8| 49/50 [01:44<00:02,  2.09s/it]
+
+-------------------------------
+Train Evaluation (Epoch 50/50)
+-------------------------------
+
+Accuracy        = 1.0000
+F1-Score        = 1.0000
+Precision       = 1.0000
+Recall          = 1.0000
+Average Loss    = 0.0018
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/1
+
+
+Time & Date = 04:26 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 1 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.9600
+F1-Score        = 0.9600
+Precision       = 0.9615
+Recall          = 0.9615
+Average Loss    = 0.0829
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [01:47<00:00,  2.40s/it]
+100%|##########| 50/50 [01:47<00:00,  2.15s/it]
+Saving Context Weights for Method: 'COCOOP'
+
+Model saved to /home/admin/asif.hanif/models/palm-base-novel/cocoop/Beijing-Opera-SEED0.pth
+
+
+Time & Date = 04:26 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 1 Minutes : 47 Seconds
+
+

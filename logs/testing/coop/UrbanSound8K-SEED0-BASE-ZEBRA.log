@@ -1,0 +1,149 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 03:39 PM , 13_Feb_2026  GST
+
+
+
+METHOD:   COOP
+USE ZEBRA: True
+Dataset:  UrbanSound8K
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/UrbanSound8K
+Split                     : train
+Number of Classes         : 5
+Number of Shots           : 16
+Total Number of Samples   : 80
+Classnames                : ['air conditioner', 'children playing', 'drilling', 'gun shot', 'street music']
+Label to Classname        : {0: 'air conditioner', 1: 'children playing', 2: 'drilling', 3: 'gun shot', 4: 'street music'}
+Classname to Label        : {'air conditioner': 0, 'children playing': 1, 'drilling': 2, 'gun shot': 3, 'street music': 4}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/UrbanSound8K
+Split                     : test
+Number of Classes         : 5
+Number of Shots           : -1
+Total Number of Samples   : 875
+Classnames                : ['air conditioner', 'children playing', 'drilling', 'gun shot', 'street music']
+Label to Classname        : {0: 'air conditioner', 1: 'children playing', 2: 'drilling', 3: 'gun shot', 4: 'street music'}
+Classname to Label        : {'air conditioner': 0, 'children playing': 1, 'drilling': 2, 'gun shot': 3, 'street music': 4}
+########################################################
+
+
+Using Method: 'COOP'
+
+
+
+COOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COOP ...
+
+Arguments:
+
+method_name              : coop
+use_zebra                 : True
+save_model               : False
+save_model_path          : None
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : /home/admin/asif.hanif/models/zebra/coop/UrbanSound8K-SEED0-ZEBRA.pth
+source_model_dataset     : None
+eval_dataset             : UrbanSound8K
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/UrbanSound8K
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : True
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : True
+eval_type                : base
+exp_name                 : UrbanSound8K
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['air conditioner', 'children playing', 'drilling', 'gun shot', 'street music'], 'novel': ['car horn', 'dog bark', 'engine idling', 'jackhammer', 'siren'], 'all': ['air conditioner', 'car horn', 'children playing', 'dog bark', 'drilling', 'engine idling', 'gun shot', 'jackhammer', 'siren', 'street music']}
+log_dir                  : logs/testing/coop
+json_file_path           : logs/testing/coop/UrbanSound8K-SEED0-BASE-ZEBRA.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x70d2f275e4f0>>
+classnames               : ['air conditioner', 'children playing', 'drilling', 'gun shot', 'street music']
+
+
+
+Loading Model (Prompt Learner) from: /home/admin/asif.hanif/models/zebra/coop/UrbanSound8K-SEED0-ZEBRA.pth
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/14
+Batch 2/14
+Batch 3/14
+Batch 4/14
+Batch 5/14
+Batch 6/14
+Batch 7/14
+Batch 8/14
+Batch 9/14
+Batch 10/14
+Batch 11/14
+Batch 12/14
+Batch 13/14
+Batch 14/14
+
+
+Time & Date = 03:39 PM , 13_Feb_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 6 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation -- BASE
+-------------------------------
+
+Accuracy        = 0.8526
+F1-Score        = 0.8671
+Precision       = 0.8710
+Recall          = 0.8710
+Average Loss    = 0.4955
+
+
+Saving Results ...
+Results Saved
+
+

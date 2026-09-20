@@ -1,0 +1,197 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 03:30 PM , 12_Jan_2026  GST
+
+
+
+Model:    ZEROSHOT
+Dataset:  NS-Instruments
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/NS-Instruments
+Split                     : train
+Number of Classes         : 5
+Number of Shots           : 16
+Total Number of Samples   : 80
+Classnames                : ['bass', 'guitar', 'mallet', 'organ', 'string']
+Label to Classname        : {0: 'bass', 1: 'guitar', 2: 'mallet', 3: 'organ', 4: 'string'}
+Classname to Label        : {'bass': 0, 'guitar': 1, 'mallet': 2, 'organ': 3, 'string': 4}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/NS-Instruments
+Split                     : test
+Number of Classes         : 10
+Number of Shots           : -1
+Total Number of Samples   : 4096
+Classnames                : ['bass', 'brass', 'flute', 'guitar', 'keyboard', 'mallet', 'organ', 'reed', 'string', 'vocal']
+Label to Classname        : {0: 'bass', 1: 'brass', 2: 'flute', 3: 'guitar', 4: 'keyboard', 5: 'mallet', 6: 'organ', 7: 'reed', 8: 'string', 9: 'vocal'}
+Classname to Label        : {'bass': 0, 'brass': 1, 'flute': 2, 'guitar': 3, 'keyboard': 4, 'mallet': 5, 'organ': 6, 'reed': 7, 'string': 8, 'vocal': 9}
+########################################################
+
+
+Using Method: 'ZEROSHOT'
+
+ZERO SHOT: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  bass.', 'The is a recording of  brass.', 'The is a recording of  flute.', 'The is a recording of  guitar.', 'The is a recording of  keyboard.', 'The is a recording of  mallet.', 'The is a recording of  organ.', 'The is a recording of  reed.', 'The is a recording of  string.', 'The is a recording of  vocal.']
+###################################################################
+
+
+
+Arguments:
+
+method_name              : zeroshot
+save_model               : False
+save_model_path          : None
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : /home/admin/asif.hanif/models/zebra/zeroshot/NS-Instruments-SEED0.pth
+source_model_dataset     : None
+eval_dataset             : NS-Instruments
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/NS-Instruments
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : True
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : True
+eval_type                : all
+exp_name                 : NS-Instruments
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 1024
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['bass', 'guitar', 'mallet', 'organ', 'string'], 'novel': ['brass', 'flute', 'keyboard', 'reed', 'vocal'], 'all': ['bass', 'brass', 'flute', 'guitar', 'keyboard', 'mallet', 'organ', 'reed', 'string', 'vocal']}
+log_dir                  : logs/testing/zeroshot
+json_file_path           : logs/testing/zeroshot/NS-Instruments-SEED0-ALL.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7c6740679400>>
+classnames               : ['bass', 'brass', 'flute', 'guitar', 'keyboard', 'mallet', 'organ', 'reed', 'string', 'vocal']
+
+
+
+
+
+Evaluating the model (ALL only) ...
+Batch 1/64
+Batch 2/64
+Batch 3/64
+Batch 4/64
+Batch 5/64
+Batch 6/64
+Batch 7/64
+Batch 8/64
+Batch 9/64
+Batch 10/64
+Batch 11/64
+Batch 12/64
+Batch 13/64
+Batch 14/64
+Batch 15/64
+Batch 16/64
+Batch 17/64
+Batch 18/64
+Batch 19/64
+Batch 20/64
+Batch 21/64
+Batch 22/64
+Batch 23/64
+Batch 24/64
+Batch 25/64
+Batch 26/64
+Batch 27/64
+Batch 28/64
+Batch 29/64
+Batch 30/64
+Batch 31/64
+Batch 32/64
+Batch 33/64
+Batch 34/64
+Batch 35/64
+Batch 36/64
+Batch 37/64
+Batch 38/64
+Batch 39/64
+Batch 40/64
+Batch 41/64
+Batch 42/64
+Batch 43/64
+Batch 44/64
+Batch 45/64
+Batch 46/64
+Batch 47/64
+Batch 48/64
+Batch 49/64
+Batch 50/64
+Batch 51/64
+Batch 52/64
+Batch 53/64
+Batch 54/64
+Batch 55/64
+Batch 56/64
+Batch 57/64
+Batch 58/64
+Batch 59/64
+Batch 60/64
+Batch 61/64
+Batch 62/64
+Batch 63/64
+Batch 64/64
+
+
+Time & Date = 03:31 PM , 12_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 58 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation -- ALL
+-------------------------------
+
+Accuracy        = 0.3291
+F1-Score        = 0.2600
+Precision       = 0.3079
+Recall          = 0.2962
+Average Loss    = 2.8541
+
+
+Saving Results ...
+Results Saved
+
+

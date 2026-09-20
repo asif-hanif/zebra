@@ -1,0 +1,440 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 04:37 PM , 11_Jan_2026  GST
+
+
+
+Model:    COOP
+Dataset:  RAVDESS
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/RAVDESS
+Split                     : train
+Number of Classes         : 4
+Number of Shots           : 16
+Total Number of Samples   : 64
+Classnames                : ['calm', 'disgust', 'happy', 'surprised']
+Label to Classname        : {0: 'calm', 1: 'disgust', 2: 'happy', 3: 'surprised'}
+Classname to Label        : {'calm': 0, 'disgust': 1, 'happy': 2, 'surprised': 3}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/RAVDESS
+Split                     : test
+Number of Classes         : 4
+Number of Shots           : -1
+Total Number of Samples   : 228
+Classnames                : ['calm', 'disgust', 'happy', 'surprised']
+Label to Classname        : {0: 'calm', 1: 'disgust', 2: 'happy', 3: 'surprised'}
+Classname to Label        : {'calm': 0, 'disgust': 1, 'happy': 2, 'surprised': 3}
+########################################################
+
+
+Using Method: 'COOP'
+
+
+
+COOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COOP ...
+
+Arguments:
+
+method_name              : coop
+save_model               : True
+save_model_path          : /home/admin/asif.hanif/models/zebra
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : None
+source_model_dataset     : None
+eval_dataset             : RAVDESS
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/RAVDESS
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : False
+eval_base                : True
+eval_novel               : False
+exp_name                 : RAVDESS
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['calm', 'disgust', 'happy', 'surprised'], 'novel': ['angry', 'fearful', 'neutral', 'sad'], 'all': ['angry', 'calm', 'disgust', 'fearful', 'happy', 'neutral', 'sad', 'surprised']}
+log_dir                  : logs/training/coop
+json_file_path           : logs/training/coop/RAVDESS-SEED0-BASE.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x79713885c4f0>>
+classnames               : ['calm', 'disgust', 'happy', 'surprised']
+
+
+
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:01<01:31,  1.86s/it]
+  4%|4         | 2/50 [00:03<01:26,  1.80s/it]
+  6%|6         | 3/50 [00:05<01:22,  1.76s/it]
+  8%|8         | 4/50 [00:07<01:20,  1.75s/it]
+
+-------------------------------
+Train Evaluation (Epoch 5/50)
+-------------------------------
+
+Accuracy        = 0.1875
+F1-Score        = 0.1670
+Precision       = 0.1526
+Recall          = 0.1875
+Average Loss    = 1.4357
+
+
+
+ 10%|#         | 5/50 [00:08<01:19,  1.76s/it]
+ 12%|#2        | 6/50 [00:10<01:16,  1.74s/it]
+ 14%|#4        | 7/50 [00:12<01:16,  1.78s/it]
+ 16%|#6        | 8/50 [00:14<01:15,  1.79s/it]
+ 18%|#8        | 9/50 [00:15<01:13,  1.79s/it]/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+-------------------------------
+Train Evaluation (Epoch 10/50)
+-------------------------------
+
+Accuracy        = 0.4531
+F1-Score        = 0.3801
+Precision       = 0.3369
+Recall          = 0.4531
+Average Loss    = 1.2086
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 04:38 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.4649
+F1-Score        = 0.3962
+Precision       = 0.3461
+Recall          = 0.4887
+Average Loss    = 1.2176
+
+
+
+ 20%|##        | 10/50 [00:22<02:09,  3.24s/it]
+ 22%|##2       | 11/50 [00:24<01:47,  2.76s/it]
+ 24%|##4       | 12/50 [00:25<01:33,  2.45s/it]
+ 26%|##6       | 13/50 [00:27<01:22,  2.22s/it]
+ 28%|##8       | 14/50 [00:29<01:12,  2.02s/it]
+
+-------------------------------
+Train Evaluation (Epoch 15/50)
+-------------------------------
+
+Accuracy        = 0.5156
+F1-Score        = 0.5213
+Precision       = 0.5398
+Recall          = 0.5156
+Average Loss    = 1.1136
+
+
+
+ 30%|###       | 15/50 [00:30<01:08,  1.95s/it]
+ 32%|###2      | 16/50 [00:32<01:03,  1.88s/it]
+ 34%|###4      | 17/50 [00:34<01:00,  1.84s/it]
+ 36%|###6      | 18/50 [00:36<00:58,  1.81s/it]
+ 38%|###8      | 19/50 [00:37<00:56,  1.81s/it]
+
+-------------------------------
+Train Evaluation (Epoch 20/50)
+-------------------------------
+
+Accuracy        = 0.4844
+F1-Score        = 0.4906
+Precision       = 0.5062
+Recall          = 0.4844
+Average Loss    = 0.9986
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 04:38 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.5439
+F1-Score        = 0.5350
+Precision       = 0.6147
+Recall          = 0.5856
+Average Loss    = 1.1406
+
+
+
+ 40%|####      | 20/50 [00:44<01:37,  3.25s/it]
+ 42%|####2     | 21/50 [00:46<01:20,  2.76s/it]
+ 44%|####4     | 22/50 [00:47<01:09,  2.47s/it]
+ 46%|####6     | 23/50 [00:49<01:00,  2.25s/it]
+ 48%|####8     | 24/50 [00:51<00:54,  2.09s/it]
+
+-------------------------------
+Train Evaluation (Epoch 25/50)
+-------------------------------
+
+Accuracy        = 0.6719
+F1-Score        = 0.6787
+Precision       = 0.7019
+Recall          = 0.6719
+Average Loss    = 0.8510
+
+
+
+ 50%|#####     | 25/50 [00:53<00:50,  2.01s/it]
+ 52%|#####2    | 26/50 [00:54<00:46,  1.93s/it]
+ 54%|#####4    | 27/50 [00:56<00:43,  1.89s/it]
+ 56%|#####6    | 28/50 [00:58<00:40,  1.83s/it]
+ 58%|#####8    | 29/50 [01:00<00:38,  1.82s/it]
+
+-------------------------------
+Train Evaluation (Epoch 30/50)
+-------------------------------
+
+Accuracy        = 0.6562
+F1-Score        = 0.6487
+Precision       = 0.6590
+Recall          = 0.6562
+Average Loss    = 0.8743
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 04:38 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.5702
+F1-Score        = 0.5456
+Precision       = 0.5992
+Recall          = 0.5903
+Average Loss    = 0.9553
+
+
+
+ 60%|######    | 30/50 [01:06<01:04,  3.21s/it]
+ 62%|######2   | 31/50 [01:08<00:52,  2.78s/it]
+ 64%|######4   | 32/50 [01:10<00:44,  2.48s/it]
+ 66%|######6   | 33/50 [01:12<00:38,  2.28s/it]
+ 68%|######8   | 34/50 [01:13<00:33,  2.12s/it]
+
+-------------------------------
+Train Evaluation (Epoch 35/50)
+-------------------------------
+
+Accuracy        = 0.7188
+F1-Score        = 0.7154
+Precision       = 0.7389
+Recall          = 0.7188
+Average Loss    = 0.7524
+
+
+
+ 70%|#######   | 35/50 [01:15<00:30,  2.02s/it]
+ 72%|#######2  | 36/50 [01:17<00:26,  1.93s/it]
+ 74%|#######4  | 37/50 [01:19<00:24,  1.89s/it]
+ 76%|#######6  | 38/50 [01:20<00:21,  1.80s/it]
+ 78%|#######8  | 39/50 [01:22<00:19,  1.79s/it]
+
+-------------------------------
+Train Evaluation (Epoch 40/50)
+-------------------------------
+
+Accuracy        = 0.5781
+F1-Score        = 0.5605
+Precision       = 0.6069
+Recall          = 0.5781
+Average Loss    = 0.7575
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 04:39 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.5921
+F1-Score        = 0.5876
+Precision       = 0.6698
+Recall          = 0.6285
+Average Loss    = 1.0329
+
+
+
+ 80%|########  | 40/50 [01:29<00:32,  3.21s/it]
+ 82%|########2 | 41/50 [01:30<00:25,  2.79s/it]
+ 84%|########4 | 42/50 [01:32<00:19,  2.48s/it]
+ 86%|########6 | 43/50 [01:34<00:15,  2.26s/it]
+ 88%|########8 | 44/50 [01:36<00:12,  2.12s/it]
+
+-------------------------------
+Train Evaluation (Epoch 45/50)
+-------------------------------
+
+Accuracy        = 0.6406
+F1-Score        = 0.6478
+Precision       = 0.6824
+Recall          = 0.6406
+Average Loss    = 0.7703
+
+
+
+ 90%|######### | 45/50 [01:37<00:09,  1.96s/it]
+ 92%|#########2| 46/50 [01:39<00:07,  1.89s/it]
+ 94%|#########3| 47/50 [01:41<00:05,  1.85s/izebra
+ 96%|#########6| 48/50 [01:42<00:03,  1.82s/it]
+ 98%|#########8| 49/50 [01:44<00:01,  1.80s/it]
+
+-------------------------------
+Train Evaluation (Epoch 50/50)
+-------------------------------
+
+Accuracy        = 0.7500
+F1-Score        = 0.7470
+Precision       = 0.7593
+Recall          = 0.7500
+Average Loss    = 0.6205
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/2
+Batch 2/2
+
+
+Time & Date = 04:39 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 4 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation
+-------------------------------
+
+Accuracy        = 0.5921
+F1-Score        = 0.5896
+Precision       = 0.6547
+Recall          = 0.6223
+Average Loss    = 0.9740
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [01:51<00:00,  3.20s/it]
+100%|##########| 50/50 [01:51<00:00,  2.22s/it]
+Saving Context Weights for Method: 'COOP'
+
+Model saved to /home/admin/asif.hanif/models/palm-base-novel/coop/RAVDESS-SEED0.pth
+
+
+Time & Date = 04:39 PM , 11_Jan_2026  GST
+
+Total Time => 0 Hours : 1 Minutes : 51 Seconds
+
+

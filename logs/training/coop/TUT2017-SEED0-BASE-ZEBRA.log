@@ -1,0 +1,335 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 03:24 PM , 13_Feb_2026  GST
+
+
+
+METHOD:   COOP
+USE ZEBRA: True
+Dataset:  TUT2017
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/TUT2017
+Split                     : train
+Number of Classes         : 7
+Number of Shots           : 16
+Total Number of Samples   : 112
+Classnames                : ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area']
+Label to Classname        : {0: 'car', 1: 'city_center', 2: 'grocery_store', 3: 'library', 4: 'metro_station', 5: 'park', 6: 'residential_area'}
+Classname to Label        : {'car': 0, 'city_center': 1, 'grocery_store': 2, 'library': 3, 'metro_station': 4, 'park': 5, 'residential_area': 6}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/TUT2017
+Split                     : test
+Number of Classes         : 7
+Number of Shots           : -1
+Total Number of Samples   : 438
+Classnames                : ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area']
+Label to Classname        : {0: 'car', 1: 'city_center', 2: 'grocery_store', 3: 'library', 4: 'metro_station', 5: 'park', 6: 'residential_area'}
+Classname to Label        : {'car': 0, 'city_center': 1, 'grocery_store': 2, 'library': 3, 'metro_station': 4, 'park': 5, 'residential_area': 6}
+########################################################
+
+
+Using Method: 'COOP'
+
+
+
+COOP: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+Initializing a Generic Context for COOP ...
+
+Arguments:
+
+method_name              : coop
+use_zebra                 : True
+save_model               : True
+save_model_path          : /home/admin/asif.hanif/models/zebra
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : None
+source_model_dataset     : None
+eval_dataset             : TUT2017
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/TUT2017
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : True
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : False
+eval_type                : base
+exp_name                 : TUT2017
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 512
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area'], 'novel': ['beach', 'bus', 'cafe/restaurant', 'forest_path', 'home', 'office', 'train', 'tram'], 'all': ['beach', 'bus', 'cafe/restaurant', 'car', 'city_center', 'forest_path', 'grocery_store', 'home', 'library', 'metro_station', 'office', 'park', 'residential_area', 'train', 'tram']}
+log_dir                  : logs/training/coop
+json_file_path           : logs/training/coop/TUT2017-SEED0-BASE-ZEBRA.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x771c6cadd4f0>>
+classnames               : ['car', 'city_center', 'grocery_store', 'library', 'metro_station', 'park', 'residential_area']
+
+
+
+
+  0%|          | 0/50 [00:00<?, ?it/s]
+  2%|2         | 1/50 [00:05<04:44,  5.81s/it]
+  4%|4         | 2/50 [00:07<02:41,  3.36s/it]
+  6%|6         | 3/50 [00:09<02:01,  2.58s/it]
+  8%|8         | 4/50 [00:10<01:42,  2.22s/it]
+
+-------------------------------
+Train Evaluation (Epoch 5/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.3929
+F1-Score        = 0.3885
+Precision       = 0.4205
+Recall          = 0.3929
+Average Loss    = 1.6669
+
+
+
+ 10%|#         | 5/50 [00:12<01:31,  2.03s/it]
+ 12%|#2        | 6/50 [00:14<01:23,  1.91s/it]
+ 14%|#4        | 7/50 [00:15<01:19,  1.85s/it]
+ 16%|#6        | 8/50 [00:17<01:15,  1.80s/it]
+ 18%|#8        | 9/50 [00:19<01:12,  1.76s/it]
+
+-------------------------------
+Train Evaluation (Epoch 10/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.5089
+F1-Score        = 0.5059
+Precision       = 0.5107
+Recall          = 0.5089
+Average Loss    = 1.1677
+
+
+
+ 20%|##        | 10/50 [00:20<01:09,  1.73s/it]
+ 22%|##2       | 11/50 [00:22<01:06,  1.71s/it]
+ 24%|##4       | 12/50 [00:24<01:03,  1.68s/it]
+ 26%|##6       | 13/50 [00:25<01:02,  1.68s/it]
+ 28%|##8       | 14/50 [00:27<01:00,  1.68s/it]
+
+-------------------------------
+Train Evaluation (Epoch 15/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.6071
+F1-Score        = 0.6044
+Precision       = 0.6061
+Recall          = 0.6071
+Average Loss    = 0.9955
+
+
+
+ 30%|###       | 15/50 [00:29<00:58,  1.68s/it]
+ 32%|###2      | 16/50 [00:30<00:56,  1.67s/it]
+ 34%|###4      | 17/50 [00:32<00:55,  1.67s/it]
+ 36%|###6      | 18/50 [00:34<00:53,  1.66s/it]
+ 38%|###8      | 19/50 [00:35<00:51,  1.66s/it]
+
+-------------------------------
+Train Evaluation (Epoch 20/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.6071
+F1-Score        = 0.6041
+Precision       = 0.6139
+Recall          = 0.6071
+Average Loss    = 1.0956
+
+
+
+ 40%|####      | 20/50 [00:37<00:49,  1.64s/it]
+ 42%|####2     | 21/50 [00:39<00:47,  1.63s/it]
+ 44%|####4     | 22/50 [00:40<00:45,  1.63s/it]
+ 46%|####6     | 23/50 [00:42<00:44,  1.63s/it]
+ 48%|####8     | 24/50 [00:43<00:42,  1.64s/it]
+
+-------------------------------
+Train Evaluation (Epoch 25/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.6339
+F1-Score        = 0.6339
+Precision       = 0.6438
+Recall          = 0.6339
+Average Loss    = 0.9194
+
+
+
+ 50%|#####     | 25/50 [00:45<00:41,  1.65s/it]
+ 52%|#####2    | 26/50 [00:47<00:39,  1.64s/it]
+ 54%|#####4    | 27/50 [00:48<00:37,  1.65s/it]
+ 56%|#####6    | 28/50 [00:50<00:36,  1.65s/it]
+ 58%|#####8    | 29/50 [00:52<00:34,  1.66s/it]
+
+-------------------------------
+Train Evaluation (Epoch 30/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.7054
+F1-Score        = 0.7072
+Precision       = 0.7133
+Recall          = 0.7054
+Average Loss    = 0.7747
+
+
+
+ 60%|######    | 30/50 [00:53<00:33,  1.66s/it]
+ 62%|######2   | 31/50 [00:55<00:31,  1.66s/it]
+ 64%|######4   | 32/50 [00:57<00:29,  1.66s/it]
+ 66%|######6   | 33/50 [00:58<00:27,  1.65s/it]
+ 68%|######8   | 34/50 [01:00<00:26,  1.64s/it]
+
+-------------------------------
+Train Evaluation (Epoch 35/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.6696
+F1-Score        = 0.6666
+Precision       = 0.6713
+Recall          = 0.6696
+Average Loss    = 0.7469
+
+
+
+ 70%|#######   | 35/50 [01:02<00:24,  1.64s/it]
+ 72%|#######2  | 36/50 [01:03<00:22,  1.63s/it]
+ 74%|#######4  | 37/50 [01:05<00:21,  1.65s/it]
+ 76%|#######6  | 38/50 [01:07<00:19,  1.66s/it]
+ 78%|#######8  | 39/50 [01:08<00:18,  1.66s/it]
+
+-------------------------------
+Train Evaluation (Epoch 40/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.7232
+F1-Score        = 0.7077
+Precision       = 0.7274
+Recall          = 0.7232
+Average Loss    = 0.8263
+
+
+
+ 80%|########  | 40/50 [01:10<00:16,  1.67s/it]
+ 82%|########2 | 41/50 [01:12<00:14,  1.66s/it]
+ 84%|########4 | 42/50 [01:13<00:13,  1.65s/it]
+ 86%|########6 | 43/50 [01:15<00:11,  1.64s/it]
+ 88%|########8 | 44/50 [01:16<00:09,  1.65s/it]
+
+-------------------------------
+Train Evaluation (Epoch 45/50 -- BASE)
+-------------------------------
+
+Accuracy        = 0.6786
+F1-Score        = 0.6777
+Precision       = 0.6852
+Recall          = 0.6786
+Average Loss    = 0.6687
+
+
+
+ 90%|######### | 45/50 [01:18<00:08,  1.65s/it]
+ 92%|#########2| 46/50 [01:20<00:06,  1.66s/it]
+ 94%|#########3| 47/50 [01:21<00:04,  1.66s/it]
+ 96%|#########6| 48/50 [01:23<00:03,  1.66s/it]
+ 98%|#########8| 49/50 [01:25<00:01,  1.68s/it]
+
+-------------------------------
+Train Evaluation (Epoch 50/50 -- BASE)ZEBRA
+-------------------------------
+
+Accuracy        = 0.6607
+F1-Score        = 0.6476
+Precision       = 0.6589
+Recall          = 0.6607
+Average Loss    = 0.8811
+
+
+
+
+Evaluating the model (BASE only) ...
+Batch 1/7
+Batch 2/7
+Batch 3/7
+Batch 4/7
+Batch 5/7
+Batch 6/7
+Batch 7/7
+
+
+Time & Date = 03:26 PM , 13_Feb_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 22 Seconds
+
+
+
+
+-------------------------------
+Test Evaluation -- BASE
+-------------------------------
+
+Accuracy        = 0.6872
+F1-Score        = 0.6796
+Precision       = 0.6919
+Recall          = 0.6862
+Average Loss    = 0.7697
+
+
+
+
+Final Evaluation
+Saving Results ...
+Results Saved
+
+
+
+100%|##########| 50/50 [01:49<00:00,  8.48s/it]
+100%|##########| 50/50 [01:49<00:00,  2.19s/it]
+Saving Context Weights for Method: 'COOP'
+
+Model saved to /home/admin/asif.hanif/models/zebra/coop/TUT2017-SEED0-ZEPL.pth
+
+
+Time & Date = 03:26 PM , 13_Feb_2026  GST
+
+Total Time => 0 Hours : 1 Minutes : 49 Seconds
+
+

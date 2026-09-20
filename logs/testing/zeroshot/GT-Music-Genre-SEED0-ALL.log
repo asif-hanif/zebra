@@ -1,0 +1,143 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 03:30 PM , 12_Jan_2026  GST
+
+
+
+Model:    ZEROSHOT
+Dataset:  GT-Music-Genre
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/GT-Music-Genre
+Split                     : train
+Number of Classes         : 5
+Number of Shots           : 16
+Total Number of Samples   : 80
+Classnames                : ['classical', 'country', 'hiphop', 'jazz', 'rock']
+Label to Classname        : {0: 'classical', 1: 'country', 2: 'hiphop', 3: 'jazz', 4: 'rock'}
+Classname to Label        : {'classical': 0, 'country': 1, 'hiphop': 2, 'jazz': 3, 'rock': 4}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/GT-Music-Genre
+Split                     : test
+Number of Classes         : 10
+Number of Shots           : -1
+Total Number of Samples   : 200
+Classnames                : ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+Label to Classname        : {0: 'blues', 1: 'classical', 2: 'country', 3: 'disco', 4: 'hiphop', 5: 'jazz', 6: 'metal', 7: 'pop', 8: 'reggae', 9: 'rock'}
+Classname to Label        : {'blues': 0, 'classical': 1, 'country': 2, 'disco': 3, 'hiphop': 4, 'jazz': 5, 'metal': 6, 'pop': 7, 'reggae': 8, 'rock': 9}
+########################################################
+
+
+Using Method: 'ZEROSHOT'
+
+ZERO SHOT: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  blues.', 'The is a recording of  classical.', 'The is a recording of  country.', 'The is a recording of  disco.', 'The is a recording of  hiphop.', 'The is a recording of  jazz.', 'The is a recording of  metal.', 'The is a recording of  pop.', 'The is a recording of  reggae.', 'The is a recording of  rock.']
+###################################################################
+
+
+
+Arguments:
+
+method_name              : zeroshot
+save_model               : False
+save_model_path          : None
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : /home/admin/asif.hanif/models/zebra/zeroshot/GT-Music-Genre-SEED0.pth
+source_model_dataset     : None
+eval_dataset             : GT-Music-Genre
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/GT-Music-Genre
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : True
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : True
+eval_type                : all
+exp_name                 : GT-Music-Genre
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 1024
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['classical', 'country', 'hiphop', 'jazz', 'rock'], 'novel': ['blues', 'disco', 'metal', 'pop', 'reggae'], 'all': ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']}
+log_dir                  : logs/testing/zeroshot
+json_file_path           : logs/testing/zeroshot/GT-Music-Genre-SEED0-ALL.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x799dc26b4400>>
+classnames               : ['blues', 'classical', 'country', 'disco', 'hiphop', 'jazz', 'metal', 'pop', 'reggae', 'rock']
+
+
+
+
+
+Evaluating the model (ALL only) ...
+Batch 1/4
+Batch 2/4
+Batch 3/4
+Batch 4/4
+
+
+Time & Date = 03:30 PM , 12_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 5 Seconds
+
+
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+-------------------------------
+Test Evaluation -- ALL
+-------------------------------
+
+Accuracy        = 0.3200
+F1-Score        = 0.2678
+Precision       = 0.2657
+Recall          = 0.3305
+Average Loss    = 4.3611
+
+
+Saving Results ...
+Results Saved
+
+

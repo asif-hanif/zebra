@@ -1,0 +1,16 @@
+{
+  "base": [
+    "bangu",
+    "xiaoluo"
+  ],
+  "novel": [
+    "daluo",
+    "naobo"
+  ],
+  "all": [
+    "bangu",
+    "daluo",
+    "naobo",
+    "xiaoluo"
+  ]
+}

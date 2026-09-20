@@ -1,0 +1,28 @@
+{
+  "base": [
+    "air conditioner",
+    "children playing",
+    "drilling",
+    "gun shot",
+    "street music"
+  ],
+  "novel": [
+    "car horn",
+    "dog bark",
+    "engine idling",
+    "jackhammer",
+    "siren"
+  ],
+  "all": [
+    "air conditioner",
+    "car horn",
+    "children playing",
+    "dog bark",
+    "drilling",
+    "engine idling",
+    "gun shot",
+    "jackhammer",
+    "siren",
+    "street music"
+  ]
+}

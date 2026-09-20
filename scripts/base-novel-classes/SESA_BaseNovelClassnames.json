@@ -1,0 +1,16 @@
+{
+  "base": [
+    "casual",
+    "siren"
+  ],
+  "novel": [
+    "explosion",
+    "gunshot"
+  ],
+  "all": [
+    "casual",
+    "explosion",
+    "gunshot",
+    "siren"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "base": [
+    "Cough",
+    "Sniff",
+    "Throat clearing"
+  ],
+  "novel": [
+    "Laughter",
+    "Sigh",
+    "Sneeze"
+  ],
+  "all": [
+    "Cough",
+    "Laughter",
+    "Sigh",
+    "Sneeze",
+    "Sniff",
+    "Throat clearing"
+  ]
+}

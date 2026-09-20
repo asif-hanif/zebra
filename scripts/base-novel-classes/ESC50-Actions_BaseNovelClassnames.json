@@ -1,0 +1,28 @@
+{
+  "base": [
+    "breathing",
+    "brushing teeth",
+    "footsteps",
+    "laughing",
+    "snoring"
+  ],
+  "novel": [
+    "clapping",
+    "coughing",
+    "crying baby",
+    "drinking sipping",
+    "sneezing"
+  ],
+  "all": [
+    "breathing",
+    "brushing teeth",
+    "clapping",
+    "coughing",
+    "crying baby",
+    "drinking sipping",
+    "footsteps",
+    "laughing",
+    "sneezing",
+    "snoring"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "base": [
+    "bass",
+    "guitar",
+    "mallet",
+    "organ",
+    "string"
+  ],
+  "novel": [
+    "brass",
+    "flute",
+    "keyboard",
+    "reed",
+    "vocal"
+  ],
+  "all": [
+    "bass",
+    "brass",
+    "flute",
+    "guitar",
+    "keyboard",
+    "mallet",
+    "organ",
+    "reed",
+    "string",
+    "vocal"
+  ]
+}

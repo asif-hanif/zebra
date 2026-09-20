@@ -1,0 +1,92 @@
+{
+  "0": {
+    "Beijing-Opera": {
+      "accuracy": 0.7826,
+      "f1_score": 0.7527,
+      "precision": 0.8611,
+      "recall": 0.75,
+      "avg_loss": 0.4643,
+      "epoch": -1
+    },
+    "CREMA-D": {
+      "accuracy": 0.1994,
+      "f1_score": 0.18,
+      "precision": 0.3513,
+      "recall": 0.3376,
+      "avg_loss": 1.5436,
+      "epoch": -1
+    },
+    "ESC50-Actions": {
+      "accuracy": 0.775,
+      "f1_score": 0.6929,
+      "precision": 0.6388,
+      "recall": 0.775,
+      "avg_loss": 0.6918,
+      "epoch": -1
+    },
+    "ESC50": {
+      "accuracy": 0.615,
+      "f1_score": 0.5861,
+      "precision": 0.7137,
+      "recall": 0.615,
+      "avg_loss": 1.0649,
+      "epoch": -1
+    },
+    "GT-Music-Genre": {
+      "accuracy": 0.3776,
+      "f1_score": 0.3032,
+      "precision": 0.3145,
+      "recall": 0.3821,
+      "avg_loss": 3.6397,
+      "epoch": -1
+    },
+    "NS-Instruments": {
+      "accuracy": 0.6373,
+      "f1_score": 0.4447,
+      "precision": 0.4672,
+      "recall": 0.5177,
+      "avg_loss": 1.4159,
+      "epoch": -1
+    },
+    "RAVDESS": {
+      "accuracy": 0.4373,
+      "f1_score": 0.3716,
+      "precision": 0.434,
+      "recall": 0.3996,
+      "avg_loss": 1.5276,
+      "epoch": -1
+    },
+    "SESA": {
+      "accuracy": 0.95,
+      "f1_score": 0.943,
+      "precision": 0.9643,
+      "recall": 0.9286,
+      "avg_loss": 0.1146,
+      "epoch": -1
+    },
+    "TUT2017": {
+      "accuracy": 0.3735,
+      "f1_score": 0.3291,
+      "precision": 0.3966,
+      "recall": 0.3749,
+      "avg_loss": 2.3424,
+      "epoch": -1
+    },
+    "UrbanSound8K": {
+      "accuracy": 0.6296,
+      "f1_score": 0.6207,
+      "precision": 0.7187,
+      "recall": 0.656,
+      "avg_loss": 1.2423,
+      "epoch": -1
+    },
+    "VocalSound": {
+      "accuracy": 0.7677,
+      "f1_score": 0.7682,
+      "precision": 0.808,
+      "recall": 0.7677,
+      "avg_loss": 0.6089,
+      "epoch": -1
+    }
+  }
+}

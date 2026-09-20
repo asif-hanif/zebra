@@ -1,0 +1,146 @@
+
+
+##############################################
+PALM: Prompt Learning in Audio Language Models
+##############################################
+
+
+Time & Date = 03:29 PM , 12_Jan_2026  GST
+
+
+
+Model:    ZEROSHOT
+Dataset:  ESC50
+Seed:     0
+
+
+
+
+Loading Base and Novel Classnames ...
+
+Creating a 16-shot dataset ...
+
+
+################## Dataset Information ##################
+
+FewShot Dataset
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/ESC50
+Split                     : train
+Number of Classes         : 25
+Number of Shots           : 16
+Total Number of Samples   : 400
+Classnames                : ['airplane', 'breathing', 'can opening', 'cat', 'chainsaw', 'clapping', 'clock alarm', 'cow', 'crackling fire', 'crow', 'crying baby', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'hand saw', 'helicopter', 'mouse click', 'rooster', 'sneezing', 'snoring', 'vacuum cleaner', 'washing machine', 'wind']
+Label to Classname        : {0: 'airplane', 1: 'breathing', 2: 'can opening', 3: 'cat', 4: 'chainsaw', 5: 'clapping', 6: 'clock alarm', 7: 'cow', 8: 'crackling fire', 9: 'crow', 10: 'crying baby', 11: 'drinking sipping', 12: 'engine', 13: 'fireworks', 14: 'footsteps', 15: 'frog', 16: 'hand saw', 17: 'helicopter', 18: 'mouse click', 19: 'rooster', 20: 'sneezing', 21: 'snoring', 22: 'vacuum cleaner', 23: 'washing machine', 24: 'wind'}
+Classname to Label        : {'airplane': 0, 'breathing': 1, 'can opening': 2, 'cat': 3, 'chainsaw': 4, 'clapping': 5, 'clock alarm': 6, 'cow': 7, 'crackling fire': 8, 'crow': 9, 'crying baby': 10, 'drinking sipping': 11, 'engine': 12, 'fireworks': 13, 'footsteps': 14, 'frog': 15, 'hand saw': 16, 'helicopter': 17, 'mouse click': 18, 'rooster': 19, 'sneezing': 20, 'snoring': 21, 'vacuum cleaner': 22, 'washing machine': 23, 'wind': 24}
+
+
+IMPORTANT: Training will be done only on base classes.
+
+########################################################
+
+
+
+
+################## Dataset Information ##################
+
+Root                      : /home/admin/asif.hanif/datasets/Audio-Datasets/ESC50
+Split                     : test
+Number of Classes         : 50
+Number of Shots           : -1
+Total Number of Samples   : 400
+Classnames                : ['airplane', 'breathing', 'brushing teeth', 'can opening', 'car horn', 'cat', 'chainsaw', 'chirping birds', 'church bells', 'clapping', 'clock alarm', 'clock tick', 'coughing', 'cow', 'crackling fire', 'crickets', 'crow', 'crying baby', 'dog', 'door wood creaks', 'door wood knock', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'glass breaking', 'hand saw', 'helicopter', 'hen', 'insects', 'keyboard typing', 'laughing', 'mouse click', 'pig', 'pouring water', 'rain', 'rooster', 'sea waves', 'sheep', 'siren', 'sneezing', 'snoring', 'thunderstorm', 'toilet flush', 'train', 'vacuum cleaner', 'washing machine', 'water drops', 'wind']
+Label to Classname        : {0: 'airplane', 1: 'breathing', 2: 'brushing teeth', 3: 'can opening', 4: 'car horn', 5: 'cat', 6: 'chainsaw', 7: 'chirping birds', 8: 'church bells', 9: 'clapping', 10: 'clock alarm', 11: 'clock tick', 12: 'coughing', 13: 'cow', 14: 'crackling fire', 15: 'crickets', 16: 'crow', 17: 'crying baby', 18: 'dog', 19: 'door wood creaks', 20: 'door wood knock', 21: 'drinking sipping', 22: 'engine', 23: 'fireworks', 24: 'footsteps', 25: 'frog', 26: 'glass breaking', 27: 'hand saw', 28: 'helicopter', 29: 'hen', 30: 'insects', 31: 'keyboard typing', 32: 'laughing', 33: 'mouse click', 34: 'pig', 35: 'pouring water', 36: 'rain', 37: 'rooster', 38: 'sea waves', 39: 'sheep', 40: 'siren', 41: 'sneezing', 42: 'snoring', 43: 'thunderstorm', 44: 'toilet flush', 45: 'train', 46: 'vacuum cleaner', 47: 'washing machine', 48: 'water drops', 49: 'wind'}
+Classname to Label        : {'airplane': 0, 'breathing': 1, 'brushing teeth': 2, 'can opening': 3, 'car horn': 4, 'cat': 5, 'chainsaw': 6, 'chirping birds': 7, 'church bells': 8, 'clapping': 9, 'clock alarm': 10, 'clock tick': 11, 'coughing': 12, 'cow': 13, 'crackling fire': 14, 'crickets': 15, 'crow': 16, 'crying baby': 17, 'dog': 18, 'door wood creaks': 19, 'door wood knock': 20, 'drinking sipping': 21, 'engine': 22, 'fireworks': 23, 'footsteps': 24, 'frog': 25, 'glass breaking': 26, 'hand saw': 27, 'helicopter': 28, 'hen': 29, 'insects': 30, 'keyboard typing': 31, 'laughing': 32, 'mouse click': 33, 'pig': 34, 'pouring water': 35, 'rain': 36, 'rooster': 37, 'sea waves': 38, 'sheep': 39, 'siren': 40, 'sneezing': 41, 'snoring': 42, 'thunderstorm': 43, 'toilet flush': 44, 'train': 45, 'vacuum cleaner': 46, 'washing machine': 47, 'water drops': 48, 'wind': 49}
+########################################################
+
+
+Using Method: 'ZEROSHOT'
+
+ZERO SHOT: loading the weights of the pengi pre-trained audio and text encoders ...
+
+
+################## Zero-Shot PENGI Information ##################
+Prompt Prefix:  The is a recording of 
+Prompts:  ['The is a recording of  airplane.', 'The is a recording of  breathing.', 'The is a recording of  brushing teeth.', 'The is a recording of  can opening.', 'The is a recording of  car horn.', 'The is a recording of  cat.', 'The is a recording of  chainsaw.', 'The is a recording of  chirping birds.', 'The is a recording of  church bells.', 'The is a recording of  clapping.', 'The is a recording of  clock alarm.', 'The is a recording of  clock tick.', 'The is a recording of  coughing.', 'The is a recording of  cow.', 'The is a recording of  crackling fire.', 'The is a recording of  crickets.', 'The is a recording of  crow.', 'The is a recording of  crying baby.', 'The is a recording of  dog.', 'The is a recording of  door wood creaks.', 'The is a recording of  door wood knock.', 'The is a recording of  drinking sipping.', 'The is a recording of  engine.', 'The is a recording of  fireworks.', 'The is a recording of  footsteps.', 'The is a recording of  frog.', 'The is a recording of  glass breaking.', 'The is a recording of  hand saw.', 'The is a recording of  helicopter.', 'The is a recording of  hen.', 'The is a recording of  insects.', 'The is a recording of  keyboard typing.', 'The is a recording of  laughing.', 'The is a recording of  mouse click.', 'The is a recording of  pig.', 'The is a recording of  pouring water.', 'The is a recording of  rain.', 'The is a recording of  rooster.', 'The is a recording of  sea waves.', 'The is a recording of  sheep.', 'The is a recording of  siren.', 'The is a recording of  sneezing.', 'The is a recording of  snoring.', 'The is a recording of  thunderstorm.', 'The is a recording of  toilet flush.', 'The is a recording of  train.', 'The is a recording of  vacuum cleaner.', 'The is a recording of  washing machine.', 'The is a recording of  water drops.', 'The is a recording of  wind.']
+###################################################################
+
+
+
+Arguments:
+
+method_name              : zeroshot
+save_model               : False
+save_model_path          : None
+save_model_abs_path      : None
+load_model_path          : None
+load_model_abs_path      : /home/admin/asif.hanif/models/zebra/zeroshot/ESC50-SEED0.pth
+source_model_dataset     : None
+eval_dataset             : ESC50
+dataset_root             : /home/admin/asif.hanif/datasets/Audio-Datasets/ESC50
+n_epochs                 : 50
+start_epoch              : 0
+freq_test_model          : 10
+eval_last_epoch_only     : True
+spec_aug                 : False
+batch_size               : 16
+lr                       : 0.05
+seed                     : 0
+eval_only                : True
+eval_type                : all
+exp_name                 : ESC50
+do_logging               : True
+prompt_prefix            : The is a recording of 
+n_ctx                    : 16
+ctx_dim                  : 1024
+num_shots                : 16
+resample                 : True
+repeat                   : False
+base_novel_all_classnames: {'base': ['airplane', 'breathing', 'can opening', 'cat', 'chainsaw', 'clapping', 'clock alarm', 'cow', 'crackling fire', 'crow', 'crying baby', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'hand saw', 'helicopter', 'mouse click', 'rooster', 'sneezing', 'snoring', 'vacuum cleaner', 'washing machine', 'wind'], 'novel': ['brushing teeth', 'car horn', 'chirping birds', 'church bells', 'clock tick', 'coughing', 'crickets', 'dog', 'door wood creaks', 'door wood knock', 'glass breaking', 'hen', 'insects', 'keyboard typing', 'laughing', 'pig', 'pouring water', 'rain', 'sea waves', 'sheep', 'siren', 'thunderstorm', 'toilet flush', 'train', 'water drops'], 'all': ['airplane', 'breathing', 'brushing teeth', 'can opening', 'car horn', 'cat', 'chainsaw', 'chirping birds', 'church bells', 'clapping', 'clock alarm', 'clock tick', 'coughing', 'cow', 'crackling fire', 'crickets', 'crow', 'crying baby', 'dog', 'door wood creaks', 'door wood knock', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'glass breaking', 'hand saw', 'helicopter', 'hen', 'insects', 'keyboard typing', 'laughing', 'mouse click', 'pig', 'pouring water', 'rain', 'rooster', 'sea waves', 'sheep', 'siren', 'sneezing', 'snoring', 'thunderstorm', 'toilet flush', 'train', 'vacuum cleaner', 'washing machine', 'water drops', 'wind']}
+log_dir                  : logs/testing/zeroshot
+json_file_path           : logs/testing/zeroshot/ESC50-SEED0-ALL.json
+device                   : cuda
+process_audio_fn         : <bound method PengiWrapper.preprocess_audio of <pengi.wrapper.PengiWrapper object at 0x7313cfef9400>>
+classnames               : ['airplane', 'breathing', 'brushing teeth', 'can opening', 'car horn', 'cat', 'chainsaw', 'chirping birds', 'church bells', 'clapping', 'clock alarm', 'clock tick', 'coughing', 'cow', 'crackling fire', 'crickets', 'crow', 'crying baby', 'dog', 'door wood creaks', 'door wood knock', 'drinking sipping', 'engine', 'fireworks', 'footsteps', 'frog', 'glass breaking', 'hand saw', 'helicopter', 'hen', 'insects', 'keyboard typing', 'laughing', 'mouse click', 'pig', 'pouring water', 'rain', 'rooster', 'sea waves', 'sheep', 'siren', 'sneezing', 'snoring', 'thunderstorm', 'toilet flush', 'train', 'vacuum cleaner', 'washing machine', 'water drops', 'wind']
+
+
+
+
+
+Evaluating the model (ALL only) ...
+Batch 1/7
+Batch 2/7
+Batch 3/7
+Batch 4/7
+Batch 5/7
+Batch 6/7
+Batch 7/7
+
+
+Time & Date = 03:30 PM , 12_Jan_2026  GST
+
+Total Time => 0 Hours : 0 Minutes : 2 Seconds
+
+
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/home/admin/.venvs/palm/lib/python3.9/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+
+
+-------------------------------
+Test Evaluation -- ALL
+-------------------------------
+
+Accuracy        = 0.5125
+F1-Score        = 0.4686
+Precision       = 0.5530
+Recall          = 0.5125
+Average Loss    = 1.9239
+
+
+Saving Results ...
+Results Saved
+
+
