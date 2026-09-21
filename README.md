@@ -187,6 +187,9 @@ bash scripts/training/beijing_opera.sh coop
 # coop with ZEBRA
 bash scripts/training/beijing_opera.sh coop --use_zebra
 
+# cocoop baseline
+bash scripts/training/beijing_opera.sh cocoop
+
 # cocoop with ZEBRA
 bash scripts/training/beijing_opera.sh cocoop --use_zebra
 ```
@@ -229,9 +232,9 @@ bash scripts/testing/beijing_opera.sh zeroshot novel
 bash scripts/testing/beijing_opera.sh coop base
 bash scripts/testing/beijing_opera.sh coop novel
 
-# coop with ZEBRA on base and novel classes
-bash scripts/testing/beijing_opera.sh coop base --use_zebra
-bash scripts/testing/beijing_opera.sh coop novel --use_zebra
+# cocoop with ZEBRA on base and novel classes
+bash scripts/testing/beijing_opera.sh cocoop base --use_zebra
+bash scripts/testing/beijing_opera.sh cocoop novel --use_zebra
 
 ```
 
