@@ -1,7 +1,7 @@
 # ZEBRA: Zero-Shot Entropy-Regularized Prompt Learning for Base-to-Novel Generalization in Audio-Language Models (INTERSPEECH'26)
 
 > [**ZEBRA: Zero-Shot Entropy-Regularized Prompt Learning for Base-to-Novel Generalization in Audio-Language Models**](https://arxiv.org/abs/2606.31587)<br><br>
-> [Asif Hanif](https://scholar.google.com/citations?hl=en&user=6SO2wqUAAAAJ) and [Mohammad Yaqub](https://scholar.google.com/citations?user=FXJzma8AAAAJ)
+> [Asif Hanif](https://scholar.google.com/citations?hl=en&user=6SO2wqUAAAAJ) and [Mohammad Yaqub](https://scholar.google.com/citations?user=9dfn5GkAAAAJ&hl=en)
 
 <!-- [![page](https://img.shields.io/badge/Project-Page-F9D371)](https://asif-hanif.github.io/trojanwave/) -->
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2606.31587)
